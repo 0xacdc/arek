@@ -5,14 +5,12 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/ennioma/arek'
   s.license          = { :type => 'MIT', :file => 'LICENSE'}
   s.author           = { 'Ennio Masi' => 'ennio.masi@gmail.com' }
-  s.source           = { :git => 'https://github.com/ennioma/arek.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:0xacdc/arek.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ennioma'
   s.ios.deployment_target = '10.0'
   s.swift_version    = '4.2'
   s.source_files = 'code/Classes/**/*', 'code/Classes/Core/**/*', 'code/Classes/Permissions/**/*'
   s.exclude_files = 'Example/*'
-  s.dependency 'PMAlertController', '3.5.0'
-
   s.subspec 'Core' do |ss|
     ss.source_files = 'code/Classes/Core/**/*.swift'
   end
