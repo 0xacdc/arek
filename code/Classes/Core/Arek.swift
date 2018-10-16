@@ -61,6 +61,7 @@ public protocol ArekPermissionProtocol: class {
  Don't instantiate ArekBasePermission directly.
  */
 open class ArekBasePermission {
+    public init() {}
 
     open func manage(completion: @escaping ArekPermissionResponse) {
         (self as? ArekPermissionProtocol)?.status { status in
