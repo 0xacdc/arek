@@ -33,20 +33,6 @@ open class ArekNotifications: ArekBasePermission, ArekPermissionProtocol {
 
     open var identifier: String = "ArekNotifications"
 
-    public init() {
-        super.init(identifier: self.identifier)
-    }
-
-    public override init(configuration: ArekConfiguration? = nil, initialPopupData: ArekPopupData? = nil, reEnablePopupData: ArekPopupData? = nil) {
-        super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-    }
-
-    public init(configuration: ArekConfiguration? = nil, initialPopupData: ArekPopupData? = nil, reEnablePopupData: ArekPopupData? = nil, notificationOptions: Any) {
-        super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-
-        self.wantedNotificationTypes = notificationOptions
-    }
-
     open func status(completion: @escaping ArekPermissionResponse) {
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().getNotificationSettings { (settings) in

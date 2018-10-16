@@ -27,16 +27,12 @@ import Foundation
 
 public struct ArekConfiguration {
     var frequency: ArekPermissionFrequency = .OnceADay
-    var presentInitialPopup: Bool = true
-    var presentReEnablePopup: Bool = true
     
     private let week = 60.0*60.0*24.0*7.0
     private let hour = 60.0*60.0
     
-    public init(frequency: ArekPermissionFrequency, presentInitialPopup: Bool, presentReEnablePopup: Bool) {
+    public init(frequency: ArekPermissionFrequency) {
         self.frequency = frequency
-        self.presentInitialPopup = presentInitialPopup
-        self.presentReEnablePopup = presentReEnablePopup
     }
     
     func reEnablePopupPresented(permission: ArekPermissionProtocol) {
@@ -45,9 +41,6 @@ public struct ArekConfiguration {
     }
     
     func canPresentReEnablePopup(permission: ArekPermissionProtocol) -> Bool {
-        if !self.presentReEnablePopup {
-            return false
-        }
         
         switch self.frequency {
         case .OnceADay:

@@ -49,14 +49,6 @@ open class ArekMotion: ArekBasePermission, ArekPermissionProtocol {
         }
     }
     
-    public init() {
-        super.init(identifier: self.identifier)
-    }
-    
-    public override init(configuration: ArekConfiguration? = nil, initialPopupData: ArekPopupData? = nil, reEnablePopupData: ArekPopupData? = nil) {
-        super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-    }
-    
     open func status(completion: @escaping ArekPermissionResponse) {
         if CMMotionActivityManager.isActivityAvailable() == false { return completion(.notAvailable) }
         

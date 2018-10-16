@@ -46,17 +46,6 @@ open class ArekHealth: ArekBasePermission, ArekPermissionProtocol {
     public var identifier: String = "ArekHealth"
 
     var healthConfiguration: ArekHealthConfiguration?
-    
-    public init() {
-        super.init(identifier: self.identifier)
-    }
-
-    public init(configuration: ArekConfiguration? = nil, initialPopupData: ArekPopupData? = nil, reEnablePopupData: ArekPopupData? = nil, arekHealthConfiguration: ArekHealthConfiguration) {
-
-        self.healthConfiguration = arekHealthConfiguration
-
-        super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-    }
 
     open func status(completion: @escaping ArekPermissionResponse) {
         guard let objectType = self.healthConfiguration?.hkObjectType else {

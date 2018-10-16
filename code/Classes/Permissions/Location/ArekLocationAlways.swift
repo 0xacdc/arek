@@ -30,15 +30,9 @@ final public class ArekLocationAlways: ArekBaseLocation {
     
     override public init() {
         let identifier = "ArekLocationAlways"
-        super.init(identifier: identifier)
+        super.init()
         
         self.identifier = identifier
-    }
-    
-    public override init(configuration: ArekConfiguration? = nil, initialPopupData: ArekPopupData? = nil, reEnablePopupData: ArekPopupData? = nil) {
-        super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-        
-        self.identifier = "ArekLocationAlways"
     }
     
     override public func askForPermission(completion: @escaping ArekPermissionResponse) {
