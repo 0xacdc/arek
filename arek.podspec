@@ -83,7 +83,7 @@ Pod::Spec.new do |s|
   s.subspec 'Photos' do |ss|
     ss.dependency 'arek/Core'
     ss.source_files = 'code/Classes/Permissions/ArekPhoto.swift'
-    ss.frameworks = 'AssetsLibrary'
+    ss.frameworks = 'Photos'
   end
 
   s.subspec 'Reminders' do |ss|
