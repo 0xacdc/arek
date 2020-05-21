@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/ennioma/arek.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ennioma'
   s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.15'
   s.swift_version    = '4.2'
   s.source_files = 'code/Classes/**/*', 'code/Classes/Core/**/*', 'code/Classes/Permissions/**/*'
   s.exclude_files = 'Example/*'
